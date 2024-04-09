@@ -56,33 +56,37 @@ img {
   max-width: 100%;
 }
 
-.container .header {
+.header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 113px;
 }
-.container .header__logo {
+.header__logo {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 197px;
   height: 63px;
 }
-.container .header__location {
+.header__logo--img {
+  width: 162px;
+}
+.header__location {
   width: 100%;
   height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--gray-medium);
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.15), 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
-.container .header .location__icon {
+.header .location__icon {
   font-size: 16px;
   margin-right: 17px;
 }
-.container .header .location__text {
+.header .location__text {
   font-size: 16px;
   line-height: 18.75px;
 }
