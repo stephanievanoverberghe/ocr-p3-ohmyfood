@@ -8,6 +8,12 @@
     --gray-light: #F6F6F6;
     --gray-dark: #353535;
     --white: #fff;
+    --btn-gradient: linear-gradient(var(--secondary), var(--primary));
+    --primary-hover: rgba(147, 86, 220, 0.85);
+    --secondary-hover: rgba(255, 121, 218, 0.85);
+    --btn-gradient-hover: linear-gradient(var(--secondary-hover), var(--primary-hover));
+    --btn-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+    --btn-shadow-hover: 0 4px 15px 0 rgba(0, 0, 0, 0.35);
 
     // Font-family
 
