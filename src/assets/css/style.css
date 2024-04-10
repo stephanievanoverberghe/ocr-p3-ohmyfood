@@ -12,15 +12,18 @@
   --gray-light: #F6F6F6;
   --gray-dark: #353535;
   --gray-bold: #7E7E7E;
+  --green-text: #008766;
   --white: #fff;
   --black: #000;
   --primary-hover: rgba(147, 86, 220, 0.85);
   --secondary-hover: rgba(255, 121, 218, 0.85);
   --btn-gradient: linear-gradient(var(--secondary), var(--primary));
   --btn-gradient-hover: linear-gradient(var(--secondary-hover), var(--primary-hover));
+  --heart-gradient: linear-gradient(var(--primary), var(--secondary));
   --btn-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
   --btn-shadow-hover: 0 4px 15px 0 rgba(0, 0, 0, 0.35);
   --functioning-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  --card-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.10);
   --shrikhand: "Shrikhand",
   serif;
   --roboto: "Roboto",
@@ -127,6 +130,59 @@ section {
   box-shadow: var(--btn-shadow-hover);
 }
 
+.card {
+  background-color: var(--white);
+  border-radius: 1.5rem;
+  width: 100%;
+  min-height: 25.1rem;
+  box-shadow: var(--card-shadow);
+}
+.card__header {
+  position: relative;
+  overflow: hidden;
+}
+.card .header__img {
+  object-fit: cover;
+  width: 100%;
+  height: 17.4rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+.card .header__span {
+  position: absolute;
+  top: 1.3rem;
+  right: 1.3rem;
+  font-size: 1.4rem;
+  background-color: var(--tertiary);
+  color: var(--green-text);
+  padding: 7px 9px;
+  border-radius: 2px;
+  box-shadow: var(--functioning-shadow);
+}
+.card__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card .body__content {
+  padding: 1.3rem;
+}
+.card .body__heart {
+  font-size: 2.2rem;
+  padding: 2.5rem;
+}
+.card .body__heart--color {
+  background: var(--heart-gradient);
+  background-clip: text;
+  color: transparent;
+}
+.card .content__title {
+  font-size: 1.8rem;
+}
+.card .content__city {
+  font-size: 1.7rem;
+  font-weight: 300;
+}
+
 .container .hero {
   display: flex;
   flex-direction: column;
@@ -143,6 +199,8 @@ section {
   font-weight: 300;
   font-size: 1.8rem;
   margin-top: 1rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 .container .hero__btn {
   margin-top: 2.7rem;
@@ -156,24 +214,27 @@ section {
   align-items: end;
   gap: 2.492rem;
   width: 100%;
+  position: relative;
 }
 .container .content__card {
-  width: 96%;
-  background-color: var(--gray-light);
-  height: 7.238rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 96%;
+  margin: auto;
+  background-color: var(--gray-light);
+  height: 7.238rem;
   border-radius: 2rem;
   box-shadow: var(--functioning-shadow);
-  position: relative;
+  padding-right: 5rem;
+  padding-left: 5rem;
 }
 .container .content__card:last-child .card__icon {
   color: var(--primary);
 }
 .container .card__number {
   position: absolute;
-  left: -4%;
+  left: -0.5rem;
   background-color: var(--primary);
   color: var(--white);
   font-size: 1.418rem;
@@ -192,6 +253,19 @@ section {
 .container .card__content {
   font-size: 1.6rem;
   color: var(--black);
+}
+.container .restaurants {
+  background-color: var(--gray-light);
+}
+.container .restaurants__title {
+  margin-bottom: 2rem;
+}
+.container .restaurants__cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.8rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -48,63 +48,66 @@
                     </div>
                 </div>
             </section>
-            <section>
-                <h2>Restaurants</h2>
-                <div>
-                    <div>
-                        <div>
-                            <img src="src/assets/img/palette-du-gout.jpg" alt="Plat du restaurant">
-                            <span>Nouveau</span>
+            <section class="restaurants">
+                <h2 class="restaurants__title">Restaurants</h2>
+                <div class="restaurants__cards">
+                    <div class="card">
+                        <div class="card__header">
+                            <img src="src/assets/img/palette-du-gout.jpg" alt="Plat du restaurant" class="header__img">
+                            <span class="header__span">Nouveau</span>
                         </div>
-                        <div>
-                            <div>
-                                <h3>La palette du goût</h3>
-                                <p>Ménilmontant</p>
+                        <div class="card__body">
+                            <div class="body__content">
+                                <h3 class="content__title">La palette du goût</h3>
+                                <p class="content__city">Ménilmontant</p>
                             </div>
-                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-heart body__heart"></i>
                         </div>
                     </div>
-                    <div>
-                        <div>
-                            <img src="src/assets/img/note-enchantee.jpg" alt="Plat du restaurant">
-                            <span>Nouveau</span>
+                    <div class="card">
+                        <div class="card__header">
+                            <img src="src/assets/img/note-enchantee.jpg" alt="Plat du restaurant" class="header__img">
+                            <span class="header__span">Nouveau</span>
                         </div>
-                        <div>
-                            <div>
-                                <h3>La note enchantée</h3>
-                                <p>Charonne</p>
+                        <div class="card__body">
+                            <div class="body__content">
+                                <h3 class="content__title">La note enchantée</h3>
+                                <p class="content__city">Charonne</p>
                             </div>
-                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-heart body__heart body__heart--color"></i>
                         </div>
                     </div>
-                    <div>
-                        <div>
-                            <img src="src/assets/img/a-la-française.jpg" alt="Plat du restaurant">
+                    <div class="card">
+                        <div class="card__header">
+                            <img src="src/assets/img/a-la-française.jpg" alt="Plat du restaurant" class="header__img">
                         </div>
-                        <div>
-                            <div>
-                                <h3>A la française</h3>
-                                <p>Cité Rouge</p>
+                        <div class="card__body">
+                            <div class="body__content">
+                                <h3 class="content__title">A la française</h3>
+                                <p class="content__city">Cité Rouge</p>
                             </div>
-                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-heart body__heart"></i>
                         </div>
                     </div>
-                    <div>
-                        <div>
-                            <img src="src/assets/img/delice-des-sens.jpg" alt="Plat du restaurant">
+                    <div class="card">
+                        <div class="card__header">
+                            <img src="src/assets/img/delice-des-sens.jpg" alt="Plat du restaurant" class="header__img">
                         </div>
-                        <div>
-                            <div>
-                                <h3>Le délice des sens</h3>
-                                <p>Folie-Méricourt</p>
+                        <div class="card__body">
+                            <div class="body__content">
+                                <h3 class="content__title">Le délice des sens</h3>
+                                <p class="content__city">Folie-Méricourt</p>
                             </div>
-                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-heart body__heart"></i>
                         </div>
                     </div>
                 </div>
             </section>
         </main>
         <footer class="footer">
+            <a href="/">
+                <img src="src/assets/img/logo.png" alt="Logo OhMyFood">
+            </a>
             <div>
                 <a href="#">
                     <i class="fa-solid fa-utensils"></i>
@@ -119,9 +122,6 @@
                 <a href="#">Mentions légales</a>
                 <a href="#">Contact</a>
             </div>
-            <a href="/">
-                <img src="src/assets/img/logo.png" alt="Logo OhMyFood">
-            </a>
         </footer>
     </div>
 </body>

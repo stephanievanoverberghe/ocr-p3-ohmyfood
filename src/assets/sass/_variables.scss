@@ -7,6 +7,7 @@
     --gray-light: #F6F6F6;
     --gray-dark: #353535;
     --gray-bold: #7E7E7E;
+    --green-text: #008766;
     --white: #fff;
     --black: #000;
     --primary-hover: rgba(147, 86, 220, 0.85);
@@ -15,11 +16,13 @@
     // Gradient
     --btn-gradient: linear-gradient(var(--secondary), var(--primary));
     --btn-gradient-hover: linear-gradient(var(--secondary-hover), var(--primary-hover));
+    --heart-gradient: linear-gradient(var(--primary), var(--secondary));
 
     // Box shadow
     --btn-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
     --btn-shadow-hover: 0 4px 15px 0 rgba(0, 0, 0, 0.35);
     --functioning-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+    --card-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.10);
 
     // Font-family
     @font-face {

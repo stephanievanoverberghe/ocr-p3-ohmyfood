@@ -3,6 +3,8 @@
 @use 'bases';
 @use 'header';
 @use 'buttons';
+@use 'cards';
+@use 'footer';
 
 .container {
     .hero {
@@ -22,6 +24,8 @@
             font-weight: 300;
             font-size: 1.8rem;
             margin-top: 1rem;
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
         }
 
         &__btn {
@@ -41,20 +45,23 @@
             align-items: end;
             gap: 2.492rem;
             width: 100%;
+            position: relative;
         }
     }
 
     .content {
         &__card {
-            width: 96%;
-            background-color: var(--gray-light);
-            height: 7.238rem;
             display: flex;
             justify-content: center;
             align-items: center;
+            width: 96%;
+            margin: auto;
+            background-color: var(--gray-light);
+            height: 7.238rem;
             border-radius: 2rem;
             box-shadow: var(--functioning-shadow);
-            position: relative;
+            padding-right: 5rem;
+            padding-left: 5rem;
 
             &:last-child .card__icon {
                 color: var(--primary);
@@ -65,7 +72,7 @@
     .card {
         &__number {
             position: absolute;
-            left: -4%;
+            left: -0.5rem;
             background-color: var(--primary);
             color: var(--white);
             font-size: 1.418rem;
@@ -88,6 +95,22 @@
             color: var(--black);
         }
 
+    }
+
+    .restaurants {
+        background-color: var(--gray-light);
+
+        &__title {
+            margin-bottom: 2rem;
+        }
+
+        &__cards {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1.8rem;
+        }
     }
 
 }
