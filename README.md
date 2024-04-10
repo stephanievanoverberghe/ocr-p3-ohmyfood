@@ -16,11 +16,11 @@
 
 #### Version Mobile
 
-![](./img/screenshot-mobile.png)
+![](./src/assets/img/screenshot-mobile.png)
 
 #### Version Desktop
 
-![](./img/screenshot.png)
+![](./src/assets/img/screenshot.png)
 
 ### Liens
 
