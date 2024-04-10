@@ -1,0 +1,40 @@
+.footer {
+    background-color: var(--gray-dark);
+    padding: 2.2rem 2.5rem;
+
+    &__logo {
+        margin-bottom: 1.6rem;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .links {
+        &__link {
+            color: var(--white);
+            font-size: 1.6rem;
+            margin-bottom: 7px;
+            font-weight: 400;
+        }
+
+        &__icons {
+            display: flex;
+            align-items: center;
+
+        }
+
+    }
+
+    .link {
+        &__icon {
+            width: 2.5rem;
+        }
+
+        &__content {
+            font-weight: 500;
+        }
+    }
+
+}
