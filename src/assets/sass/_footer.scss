@@ -1,14 +1,34 @@
+@use 'media-queries' as *;
+
 .footer {
     background-color: var(--gray-dark);
     padding: 2.2rem 2.5rem;
 
+    @include lg {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding: 5.7rem 2.5rem 3rem 2.5rem;
+    }
+
     &__logo {
         margin-bottom: 1.6rem;
+
+        @include lg {
+            margin-bottom: 0;
+            margin-left: 10rem;
+            margin-right: 6rem;
+        }
     }
 
     &__links {
         display: flex;
         flex-direction: column;
+
+        @include lg {
+            flex-direction: row;
+            gap: 3rem;
+        }
     }
 
     .links {
@@ -17,11 +37,30 @@
             font-size: 1.6rem;
             margin-bottom: 7px;
             font-weight: 400;
+
+            @include lg {
+                margin-bottom: 0;
+                cursor: pointer;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: var(--secondary);
+                }
+            }
+        }
+
+        &__logo {
+            font-family: var(--shrikhand);
+            font-size: 1.8rem;
         }
 
         &__icons {
             display: flex;
             align-items: center;
+
+            @include lg {
+                flex-direction: row;
+            }
 
         }
 

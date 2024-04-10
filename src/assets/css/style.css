@@ -83,6 +83,12 @@ img {
 section {
   padding: 4.8rem 2rem;
 }
+@media only screen and (min-width: 992px) {
+  section {
+    padding-right: 18rem;
+    padding-left: 18rem;
+  }
+}
 
 .header {
   display: flex;
@@ -191,12 +197,33 @@ section {
   background-color: var(--gray-dark);
   padding: 2.2rem 2.5rem;
 }
+@media only screen and (min-width: 992px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 5.7rem 2.5rem 3rem 2.5rem;
+  }
+}
 .footer__logo {
   margin-bottom: 1.6rem;
+}
+@media only screen and (min-width: 992px) {
+  .footer__logo {
+    margin-bottom: 0;
+    margin-left: 10rem;
+    margin-right: 6rem;
+  }
 }
 .footer__links {
   display: flex;
   flex-direction: column;
+}
+@media only screen and (min-width: 992px) {
+  .footer__links {
+    flex-direction: row;
+    gap: 3rem;
+  }
 }
 .footer .links__link {
   color: var(--white);
@@ -204,9 +231,28 @@ section {
   margin-bottom: 7px;
   font-weight: 400;
 }
+@media only screen and (min-width: 992px) {
+  .footer .links__link {
+    margin-bottom: 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  .footer .links__link:hover {
+    color: var(--secondary);
+  }
+}
+.footer .links__logo {
+  font-family: var(--shrikhand);
+  font-size: 1.8rem;
+}
 .footer .links__icons {
   display: flex;
   align-items: center;
+}
+@media only screen and (min-width: 992px) {
+  .footer .links__icons {
+    flex-direction: row;
+  }
 }
 .footer .link__icon {
   width: 2.5rem;
@@ -240,33 +286,36 @@ section {
 .container .functioning__title {
   margin-bottom: 2.6rem;
 }
-.container .functioning__content {
+.container .functioning__btn {
   display: flex;
   flex-direction: column;
   align-items: end;
   gap: 2.492rem;
   width: 100%;
-  position: relative;
 }
-.container .content__card {
+@media only screen and (min-width: 1200px) {
+  .container .functioning__btn {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.container .btn__content {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 96%;
-  margin: auto;
   background-color: var(--gray-light);
   height: 7.238rem;
   border-radius: 2rem;
   box-shadow: var(--functioning-shadow);
-  padding-right: 5rem;
-  padding-left: 5rem;
 }
-.container .content__card:last-child .card__icon {
+.container .btn__content:last-child .body__icon {
   color: var(--primary);
 }
-.container .card__number {
+.container .content__number {
   position: absolute;
-  left: -0.5rem;
+  left: -1.2rem;
   background-color: var(--primary);
   color: var(--white);
   font-size: 1.418rem;
@@ -277,12 +326,17 @@ section {
   align-items: center;
   border-radius: 50%;
 }
-.container .card__icon {
+.container .content__body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .body__icon {
   font-size: 2rem;
   color: var(--gray-bold);
   margin-right: 2rem;
 }
-.container .card__content {
+.container .body__content {
   font-size: 1.6rem;
   color: var(--black);
 }
@@ -298,6 +352,25 @@ section {
   justify-content: center;
   align-items: center;
   gap: 1.8rem;
+}
+@media only screen and (min-width: 768px) {
+  .container .restaurants__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .container .restaurants__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .container .restaurants__cards {
+    column-gap: 10rem;
+    row-gap: 5rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
