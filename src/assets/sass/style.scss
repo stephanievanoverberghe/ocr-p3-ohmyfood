@@ -101,6 +101,10 @@
             font-size: 2rem;
             color: var(--gray-bold);
             margin-right: 1rem;
+
+            @include sm {
+                margin-right: 2rem;
+            }
         }
 
         &__content {
