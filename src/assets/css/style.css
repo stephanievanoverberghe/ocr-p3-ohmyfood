@@ -199,13 +199,11 @@ section {
 .card .body__heart:hover .heart__empty {
   opacity: 0;
 }
-.card .body__heart:focus .heart__empty {
-  opacity: 1;
-}
 .card .body__heart:hover .heart__full {
   opacity: 1;
   background: var(--heart-gradient);
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
 }
 .card .heart__toggle {
@@ -218,11 +216,17 @@ section {
 .card .heart__full {
   opacity: 0;
 }
-.card .heart__toggle:checked + label .heart__full {
-  opacity: 1;
-}
-.card .heart__toggle:checked + label .heart__empty {
-  opacity: 0;
+@media only screen and (min-width: 992px) {
+  .card .heart__toggle:checked + label .heart__full {
+    opacity: 1;
+    background: var(--heart-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  .card .heart__toggle:checked + label .heart__empty {
+    opacity: 0;
+  }
 }
 .card .content__title {
   font-size: 1.8rem;
