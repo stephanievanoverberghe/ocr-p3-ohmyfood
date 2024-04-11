@@ -80,13 +80,15 @@
 
     .heart {
         &__toggle {
-            display: none;
+            opacity: 0;
+            padding: 1.5rem;
         }
 
         &__empty,
         &__full {
             position: absolute;
             transition: opacity .3s ease-in-out;
+            cursor: pointer;
         }
 
         &__full {

@@ -207,11 +207,13 @@ section {
   color: transparent;
 }
 .card .heart__toggle {
-  display: none;
+  opacity: 0;
+  padding: 1.5rem;
 }
 .card .heart__empty, .card .heart__full {
   position: absolute;
   transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
 }
 .card .heart__full {
   opacity: 0;
