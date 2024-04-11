@@ -155,7 +155,7 @@ section {
 }
 @media only screen and (min-width: 992px) {
   .card:hover {
-    transform: scale(1.1);
+    transform: scale(1.02);
     box-shadow: var(--card-shadow-hover);
   }
 }
@@ -192,11 +192,17 @@ section {
   align-items: center;
   justify-content: center;
   font-size: 2.2rem;
-  padding: 3rem;
+  padding: 2.5rem;
+  border: 0;
+  outline: none;
+  background-color: transparent;
   cursor: pointer;
 }
 .card .body__heart:hover .heart__empty {
   opacity: 0;
+}
+.card .body__heart:focus .heart__empty {
+  opacity: 1;
 }
 .card .body__heart:hover .heart__full {
   opacity: 1;
@@ -204,8 +210,13 @@ section {
   background-clip: text;
   color: transparent;
 }
-.card .heart__checkbox {
-  display: none;
+@media only screen and (min-width: 992px) {
+  .card .body__heart:focus .heart__full {
+    opacity: 1;
+    background: var(--heart-gradient);
+    background-clip: text;
+    color: transparent;
+  }
 }
 .card .heart__empty, .card .heart__full {
   position: absolute;
