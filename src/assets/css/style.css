@@ -218,6 +218,9 @@ section {
     color: transparent;
   }
 }
+.card .heart__toggle {
+  display: none;
+}
 .card .heart__empty, .card .heart__full {
   position: absolute;
   transition: opacity 0.3s ease-in-out;

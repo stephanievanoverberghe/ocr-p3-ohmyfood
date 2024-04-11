@@ -96,6 +96,10 @@
 
     .heart {
 
+        &__toggle {
+            display: none;
+        }
+
         &__empty,
         &__full {
             position: absolute;
