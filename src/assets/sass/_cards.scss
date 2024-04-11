@@ -95,18 +95,16 @@
             opacity: 0;
         }
 
-        @include lg {
-            &__toggle:checked+label .heart__full {
-                opacity: 1;
-                background: var(--heart-gradient);
-                background-clip: text;
-                -webkit-background-clip: text;
-                color: transparent;
-            }
+        &__toggle:checked+label .heart__full {
+            opacity: 1;
+            background: var(--heart-gradient);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
 
-            &__toggle:checked+label .heart__empty {
-                opacity: 0;
-            }
+        &__toggle:checked+label .heart__empty {
+            opacity: 0;
         }
 
     }
