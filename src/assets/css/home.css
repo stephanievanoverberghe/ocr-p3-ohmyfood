@@ -13,6 +13,7 @@
   --gray-dark: #353535;
   --gray-bold: #7E7E7E;
   --green-text: #008766;
+  --black-title: #101010;
   --white: #fff;
   --black: #000;
   --primary-hover: rgba(147, 86, 220, 0.85);
@@ -149,12 +150,12 @@ section {
   min-height: 25.1rem;
   box-shadow: var(--card-shadow);
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 576px) {
   .card {
     transition: all 0.3s ease-in-out;
   }
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 576px) {
   .card:hover {
     transform: scale(1.02);
     box-shadow: var(--card-shadow-hover);
@@ -207,34 +208,35 @@ section {
   -webkit-background-clip: text;
   color: transparent;
 }
-.card .heart__toggle {
-  opacity: 0;
-  padding: 1.5rem;
-}
-.card .heart__empty, .card .heart__full {
-  position: absolute;
-  transition: opacity 0.3s ease-in-out;
-  cursor: pointer;
-}
-.card .heart__full {
-  opacity: 0;
-}
-.card .heart__toggle:checked + label .heart__full {
-  opacity: 1;
-  background: var(--heart-gradient);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-.card .heart__toggle:checked + label .heart__empty {
-  opacity: 0;
-}
 .card .content__title {
   font-size: 1.8rem;
 }
 .card .content__city {
   font-size: 1.7rem;
   font-weight: 300;
+}
+
+.heart__toggle {
+  opacity: 0;
+  padding: 1.5rem;
+}
+.heart__empty, .heart__full {
+  position: absolute;
+  transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
+}
+.heart__full {
+  opacity: 0;
+}
+.heart__toggle:checked + label .heart__full {
+  opacity: 1;
+  background: var(--heart-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.heart__toggle:checked + label .heart__empty {
+  opacity: 0;
 }
 
 .footer {

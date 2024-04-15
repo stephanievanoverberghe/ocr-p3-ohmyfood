@@ -1,9 +1,156 @@
 @use 'reset';
 @use 'variables';
 @use 'bases';
-// @use 'header';
 @use 'header-menu';
 @use 'buttons';
 @use 'cards';
 @use 'footer';
 @use 'media-queries' as *;
+
+.hero {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include md {
+        height: 38.3rem;
+        overflow: hidden;
+    }
+
+    &__img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.main {
+    @include lg {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.menu {
+    position: relative;
+    background-color: #f6f6f6;
+    border-radius: 3rem 3rem 0 0;
+    padding: 3.2rem 1.3rem 4rem 1.3rem;
+    margin-top: -5rem;
+
+    @include lg {
+        width: 105.5rem;
+        padding: 5rem 20rem;
+    }
+
+    &__restaurant {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 4.2rem;
+
+        @include md {
+            justify-content: center;
+        }
+    }
+
+    &__options {
+        margin-bottom: 4rem;
+    }
+
+    &__order {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.options {
+    &__title {
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        font-weight: 300;
+        color: var(--black);
+        margin-bottom: 0.5rem;
+    }
+
+    &__border {
+        display: flex;
+        width: 40px;
+        height: 3px;
+        background-color: #99e2d0;
+        margin-bottom: 1.2rem;
+    }
+}
+
+.restaurant__title {
+    font-size: 2.8rem;
+    font-family: var(--shrikhand);
+    font-style: italic;
+    color: var(--black-title);
+
+    @include md {
+        margin-right: 2.4rem;
+    }
+}
+
+.heart {
+
+    &__icons {
+        margin-right: 5rem;
+    }
+
+    &__empty,
+    &__full {
+        font-size: 2.3rem;
+        padding: 0;
+    }
+}
+
+.plates {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.plate {
+    background-color: var(--white);
+    padding: 1.5rem 1.35rem;
+    border-radius: 1rem;
+    box-shadow: var(--btn-shadow);
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: var(--black);
+        font-weight: bold;
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.504rem;
+
+        &:last-child {
+            align-items: end;
+        }
+    }
+}
+
+.body {
+    &__description {
+        font-weight: 300;
+        margin-top: 0.5rem;
+        color: var(black);
+        margin-right: 0.5rem;
+    }
+
+    &__price {
+        font-weight: 700;
+        color: var(--gray-dark);
+    }
+}
+
+.order__btn {
+    padding: 1.6rem 4.9rem;
+}

@@ -13,6 +13,7 @@
   --gray-dark: #353535;
   --gray-bold: #7E7E7E;
   --green-text: #008766;
+  --black-title: #101010;
   --white: #fff;
   --black: #000;
   --primary-hover: rgba(147, 86, 220, 0.85);
@@ -96,11 +97,11 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 63px;
+  height: 6.3rem;
   width: 100%;
 }
 .header__icon {
-  font-size: 3rem;
+  font-size: 2.5rem;
   padding: 1.7rem;
 }
 .header__img {
@@ -131,12 +132,12 @@ section {
   min-height: 25.1rem;
   box-shadow: var(--card-shadow);
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 576px) {
   .card {
     transition: all 0.3s ease-in-out;
   }
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 576px) {
   .card:hover {
     transform: scale(1.02);
     box-shadow: var(--card-shadow-hover);
@@ -189,34 +190,35 @@ section {
   -webkit-background-clip: text;
   color: transparent;
 }
-.card .heart__toggle {
-  opacity: 0;
-  padding: 1.5rem;
-}
-.card .heart__empty, .card .heart__full {
-  position: absolute;
-  transition: opacity 0.3s ease-in-out;
-  cursor: pointer;
-}
-.card .heart__full {
-  opacity: 0;
-}
-.card .heart__toggle:checked + label .heart__full {
-  opacity: 1;
-  background: var(--heart-gradient);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
-.card .heart__toggle:checked + label .heart__empty {
-  opacity: 0;
-}
 .card .content__title {
   font-size: 1.8rem;
 }
 .card .content__city {
   font-size: 1.7rem;
   font-weight: 300;
+}
+
+.heart__toggle {
+  opacity: 0;
+  padding: 1.5rem;
+}
+.heart__empty, .heart__full {
+  position: absolute;
+  transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
+}
+.heart__full {
+  opacity: 0;
+}
+.heart__toggle:checked + label .heart__full {
+  opacity: 1;
+  background: var(--heart-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.heart__toggle:checked + label .heart__empty {
+  opacity: 0;
 }
 
 .footer {
@@ -285,6 +287,140 @@ section {
 }
 .footer .link__content {
   font-weight: 500;
+}
+
+.hero {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (min-width: 768px) {
+  .hero {
+    height: 38.3rem;
+    overflow: hidden;
+  }
+}
+.hero__img {
+  width: 100%;
+  object-fit: cover;
+}
+
+@media only screen and (min-width: 992px) {
+  .main {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.menu {
+  position: relative;
+  background-color: #f6f6f6;
+  border-radius: 3rem 3rem 0 0;
+  padding: 3.2rem 1.3rem 4rem 1.3rem;
+  margin-top: -5rem;
+}
+@media only screen and (min-width: 992px) {
+  .menu {
+    width: 105.5rem;
+    padding: 5rem 20rem;
+  }
+}
+.menu__restaurant {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4.2rem;
+}
+@media only screen and (min-width: 768px) {
+  .menu__restaurant {
+    justify-content: center;
+  }
+}
+.menu__options {
+  margin-bottom: 4rem;
+}
+.menu__order {
+  display: flex;
+  justify-content: center;
+}
+
+.options__title {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+}
+.options__border {
+  display: flex;
+  width: 40px;
+  height: 3px;
+  background-color: #99e2d0;
+  margin-bottom: 1.2rem;
+}
+
+.restaurant__title {
+  font-size: 2.8rem;
+  font-family: var(--shrikhand);
+  font-style: italic;
+  color: var(--black-title);
+}
+@media only screen and (min-width: 768px) {
+  .restaurant__title {
+    margin-right: 2.4rem;
+  }
+}
+
+.heart__icons {
+  margin-right: 5rem;
+}
+.heart__empty, .heart__full {
+  font-size: 2.3rem;
+  padding: 0;
+}
+
+.plates {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.plate {
+  background-color: var(--white);
+  padding: 1.5rem 1.35rem;
+  border-radius: 1rem;
+  box-shadow: var(--btn-shadow);
+}
+.plate__title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--black);
+  font-weight: bold;
+}
+.plate__body {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.504rem;
+}
+.plate__body:last-child {
+  align-items: end;
+}
+
+.body__description {
+  font-weight: 300;
+  margin-top: 0.5rem;
+  color: var(black);
+  margin-right: 0.5rem;
+}
+.body__price {
+  font-weight: 700;
+  color: var(--gray-dark);
+}
+
+.order__btn {
+  padding: 1.6rem 4.9rem;
 }
 
 /*# sourceMappingURL=menu.css.map */

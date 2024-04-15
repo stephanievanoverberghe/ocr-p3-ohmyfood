@@ -7,12 +7,12 @@
     min-height: 25.1rem;
     box-shadow: var(--card-shadow);
 
-    @include lg {
+    @include sm {
         transition: all .3s ease-in-out;
     }
 
     &:hover {
-        @include lg {
+        @include sm {
             transform: scale(1.02);
             box-shadow: var(--card-shadow-hover);
         }
@@ -78,36 +78,7 @@
         }
     }
 
-    .heart {
-        &__toggle {
-            opacity: 0;
-            padding: 1.5rem;
-        }
 
-        &__empty,
-        &__full {
-            position: absolute;
-            transition: opacity .3s ease-in-out;
-            cursor: pointer;
-        }
-
-        &__full {
-            opacity: 0;
-        }
-
-        &__toggle:checked+label .heart__full {
-            opacity: 1;
-            background: var(--heart-gradient);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-        }
-
-        &__toggle:checked+label .heart__empty {
-            opacity: 0;
-        }
-
-    }
 
     .content {
         &__title {
@@ -118,6 +89,36 @@
             font-size: 1.7rem;
             font-weight: 300;
         }
+    }
+}
+
+.heart {
+    &__toggle {
+        opacity: 0;
+        padding: 1.5rem;
+    }
+
+    &__empty,
+    &__full {
+        position: absolute;
+        transition: opacity .3s ease-in-out;
+        cursor: pointer;
+    }
+
+    &__full {
+        opacity: 0;
+    }
+
+    &__toggle:checked+label .heart__full {
+        opacity: 1;
+        background: var(--heart-gradient);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    &__toggle:checked+label .heart__empty {
+        opacity: 0;
     }
 
 }
