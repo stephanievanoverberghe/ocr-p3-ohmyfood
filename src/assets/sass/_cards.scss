@@ -65,17 +65,20 @@
             cursor: pointer;
         }
 
-        &__heart:hover .heart__empty {
-            opacity: 0;
+        @include lg {
+            &__heart:hover .heart__empty {
+                opacity: 0;
+            }
+
+            &__heart:hover .heart__full {
+                opacity: 1;
+                background: var(--heart-gradient);
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+            }
         }
 
-        &__heart:hover .heart__full {
-            opacity: 1;
-            background: var(--heart-gradient);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-        }
     }
 
 
