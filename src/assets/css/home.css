@@ -241,50 +241,15 @@ section {
   }
   100% {
     opacity: 0;
+    display: none;
   }
 }
-@keyframes exit {
+@keyframes spin {
   0% {
-    transform: translateY(0);
-    opacity: 1;
+    transform: rotate(0deg);
   }
   100% {
-    transform: translateY(-1500px);
-    opacity: 0;
-  }
-}
-@keyframes color-change {
-  0% {
-    background: var(--primary);
-  }
-  50% {
-    background: var(--secondary);
-  }
-  100% {
-    background: var(--tertiary);
-  }
-}
-@keyframes jello-horizontal {
-  0% {
-    transform: scale3d(1, 1, 1);
-  }
-  30% {
-    transform: scale3d(1.25, 0.75, 1);
-  }
-  40% {
-    transform: scale3d(0.75, 1.25, 1);
-  }
-  50% {
-    transform: scale3d(1.15, 0.85, 1);
-  }
-  65% {
-    transform: scale3d(0.95, 1.05, 1);
-  }
-  75% {
-    transform: scale3d(1.05, 0.95, 1);
-  }
-  100% {
-    transform: scale3d(1, 1, 1);
+    transform: rotate(360deg);
   }
 }
 .body__heart {
@@ -309,36 +274,38 @@ section {
   }
 }
 
-.container__loader {
-  display: flex;
-  z-index: 1050;
-  background-color: var(--white);
+.loader-container {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  animation: fadeOut ease-in 3s forwards, exit 0.5s cubic-bezier(1, 0, 0, 1) 3s both, color-change 3s linear infinite alternate both;
-}
-.container__loader .loader {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
   display: flex;
-  flex: 1;
   justify-content: center;
   align-items: center;
+  z-index: 10;
+  animation: fadeOut 2s forwards;
 }
-.container__loader .loader img {
-  width: 50%;
-  filter: invert(1);
-  animation: jello-horizontal 0.9s infinite both;
+
+.loader {
+  border: 1rem solid var(--white);
+  border-top: 1rem solid var(--primary);
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  animation: spin 2s infinite;
 }
-@media only screen and (min-width: 576px) {
-  .container__loader .loader img {
-    width: 40%;
+@media only screen and (min-width: 768px) {
+  .loader {
+    width: 7rem;
+    height: 7rem;
   }
 }
 @media only screen and (min-width: 992px) {
-  .container__loader .loader img {
-    width: 20%;
+  .loader {
+    width: 10rem;
+    height: 10rem;
   }
 }
 
