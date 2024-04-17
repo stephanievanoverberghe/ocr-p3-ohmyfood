@@ -4,6 +4,7 @@
 @use 'header';
 @use 'buttons';
 @use 'cards';
+@use 'animations';
 @use 'footer';
 @use 'media-queries' as *;
 
@@ -110,6 +111,10 @@
         &__content {
             font-size: 1.6rem;
             color: var(--black);
+        }
+
+        &__heart {
+            padding: 2.5rem;
         }
     }
 

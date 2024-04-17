@@ -53,36 +53,6 @@
         padding: 1.3rem;
     }
 
-    .body {
-        &__heart {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.2rem;
-            padding: 2.5rem;
-            background-color: transparent;
-            cursor: pointer;
-        }
-
-        @include lg {
-            &__heart:hover .heart__empty {
-                opacity: 0;
-            }
-
-            &__heart:hover .heart__full {
-                opacity: 1;
-                background: var(--heart-gradient);
-                background-clip: text;
-                -webkit-background-clip: text;
-                color: transparent;
-            }
-        }
-
-    }
-
-
-
     .content {
         &__title {
             font-size: 1.8rem;
@@ -99,6 +69,8 @@
     &__toggle {
         opacity: 0;
         padding: 1.5rem;
+        width: 2.2rem;
+        height: 2.2rem;
     }
 
     &__empty,
