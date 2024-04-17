@@ -94,14 +94,15 @@
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+
 }
 
 .plate {
-    height: 7.1rem;
+    // height: 5.2rem;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     background-color: var(--white);
     box-shadow: var(--btn-shadow);
     border-radius: 1rem;
@@ -134,7 +135,9 @@
     }
 
     &__check {
-        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: var(--tertiary);
         border-radius: 0 1rem 1rem 0;
         transition: width 0.4s ease-in-out;
