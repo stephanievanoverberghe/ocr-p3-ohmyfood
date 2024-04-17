@@ -222,14 +222,15 @@ section {
   opacity: 0;
 }
 
-@keyframes slideup {
-  from {
-    transform: translateY(20px);
-    opacity: 0%;
+@keyframes slideUp {
+  0% {
+    opacity: 0;
   }
-  to {
-    transform: translateY(0px);
-    opacity: 100%;
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
   }
 }
 @keyframes fadeOut {
@@ -499,8 +500,6 @@ section {
   background-color: var(--white);
   box-shadow: var(--btn-shadow);
   border-radius: 1rem;
-  opacity: 0;
-  animation: slideup 1s forwards;
 }
 .plate:hover {
   cursor: pointer;
@@ -538,7 +537,6 @@ section {
 
 .plate:hover .check__icon {
   transform: rotate(360deg);
-  opacity: 1;
 }
 
 .check__icon {
@@ -547,7 +545,6 @@ section {
   color: var(--white);
   transform: rotate(0deg);
   transition: transform 0.7s;
-  opacity: 0;
 }
 
 .body__description {

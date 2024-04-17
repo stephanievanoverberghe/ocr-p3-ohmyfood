@@ -1,13 +1,15 @@
-// Menu restaurants
-@keyframes slideup {
-    from {
-        transform: translateY(20px);
-        opacity: 0%;
+// Menu appearance
+@keyframes slideUp {
+    0% {
+        opacity: 0;
     }
 
-    to {
-        transform: translateY(0px);
-        opacity: 100%;
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
 
