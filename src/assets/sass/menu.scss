@@ -98,7 +98,6 @@
 }
 
 .plate {
-    // height: 5.2rem;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
@@ -119,7 +118,6 @@
 
     &__title {
         font-size: 1.8rem;
-        font-weight: 500;
         color: var(--black);
         font-weight: bold;
     }
@@ -154,8 +152,8 @@
 }
 
 .check__icon {
-    font-size: 20px;
-    padding: 25px 20px;
+    font-size: 2rem;
+    padding: 2.5rem 2rem;
     color: var(--white);
     transform: rotate(0deg);
     transition: transform 0.7s;
