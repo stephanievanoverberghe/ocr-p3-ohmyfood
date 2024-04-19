@@ -456,9 +456,6 @@ section {
   box-shadow: var(--btn-shadow);
   border-radius: 1rem;
 }
-.plate:hover {
-  cursor: pointer;
-}
 .plate__content {
   flex: 1;
   padding: 1.5rem 1.35rem;
@@ -474,23 +471,24 @@ section {
   justify-content: space-between;
   font-size: 1.504rem;
 }
-.plate__body:last-child {
-  align-items: end;
-}
 .plate__check {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--tertiary);
   border-radius: 0 1rem 1rem 0;
-  transition: width 0.4s ease-in-out;
+  transform: translateX(6rem);
+  transition: all 0.4s ease-in-out;
   width: 0;
 }
 
-.plate:hover .plate__check {
-  width: 5.9rem;
+.plate:hover {
+  cursor: pointer;
 }
-
+.plate:hover .plate__check {
+  transform: translateX(0);
+  width: 60px;
+}
 .plate:hover .check__icon {
   transform: rotate(360deg);
 }
@@ -500,7 +498,7 @@ section {
   padding: 2.5rem 2rem;
   color: var(--white);
   transform: rotate(0deg);
-  transition: transform 0.7s;
+  transition: 0.7s ease-in-out;
 }
 
 .body__description {
