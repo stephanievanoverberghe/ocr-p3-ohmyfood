@@ -1,7 +1,6 @@
 @use 'media-queries' as *;
 
 .restaurants {
-
     &__cards {
         display: grid;
         grid-template-columns: 1fr;
@@ -27,7 +26,6 @@
         }
     }
 }
-
 
 .card {
     background-color: var(--white);
@@ -79,7 +77,6 @@
         }
     }
 }
-
 
 .content {
     &__title {
@@ -133,5 +130,4 @@
     &__toggle:checked+label .heart__empty {
         opacity: 0;
     }
-
 }

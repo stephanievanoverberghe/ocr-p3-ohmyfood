@@ -1,9 +1,9 @@
 @use 'keyframes' as *;
 @use 'media-queries' as *;
 
+// HEARTS
 .body {
     &__heart {
-        // position: relative;
         font-size: 2.2rem;
         background-color: transparent;
         cursor: pointer;
@@ -24,7 +24,7 @@
     }
 }
 
-// Loader
+// LOADER
 .loader-container {
     position: fixed;
     top: 0;
