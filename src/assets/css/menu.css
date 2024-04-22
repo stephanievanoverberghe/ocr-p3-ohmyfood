@@ -144,6 +144,34 @@ section {
   box-shadow: var(--btn-shadow-hover);
 }
 
+.restaurants__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.8rem;
+}
+@media only screen and (min-width: 768px) {
+  .restaurants__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .restaurants__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .restaurants__cards {
+    column-gap: 10rem;
+    row-gap: 5rem;
+  }
+}
+
 .card {
   background-color: var(--white);
   border-radius: 1.5rem;
@@ -164,7 +192,12 @@ section {
 }
 .card__header {
   position: relative;
-  overflow: hidden;
+}
+.card__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3rem;
 }
 .card .header__img {
   object-fit: cover;
@@ -183,30 +216,34 @@ section {
   border-radius: 2px;
   box-shadow: var(--functioning-shadow);
 }
-.card__body {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.3rem;
-}
-.card .content__title {
+
+.content__title {
   font-size: 1.8rem;
 }
-.card .content__city {
+.content__city {
   font-size: 1.7rem;
   font-weight: 300;
 }
 
 .heart__toggle {
   display: none;
+  position: absolute;
   padding: 1.5rem;
   width: 2.2rem;
   height: 2.2rem;
+}
+.heart .heart__icons {
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
 }
 .heart__empty, .heart__full {
   position: absolute;
   transition: opacity 0.3s ease-in-out;
   cursor: pointer;
+  padding: 0.5rem;
 }
 .heart__full {
   opacity: 0;
@@ -253,7 +290,6 @@ section {
   }
 }
 .body__heart {
-  position: relative;
   font-size: 2.2rem;
   background-color: transparent;
   cursor: pointer;
@@ -433,6 +469,7 @@ section {
   font-family: var(--shrikhand);
   font-style: italic;
   color: var(--black-title);
+  margin-right: 1rem;
 }
 @media only screen and (min-width: 768px) {
   .restaurant__title {
@@ -445,7 +482,6 @@ section {
 }
 .heart__empty, .heart__full {
   font-size: 2.3rem;
-  padding: 0;
 }
 
 .plates {

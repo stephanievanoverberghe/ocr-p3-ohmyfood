@@ -3,7 +3,7 @@
 
 .body {
     &__heart {
-        position: relative;
+        // position: relative;
         font-size: 2.2rem;
         background-color: transparent;
         cursor: pointer;
@@ -23,9 +23,6 @@
         }
     }
 }
-
-// Animation menu
-
 
 // Loader
 .loader-container {

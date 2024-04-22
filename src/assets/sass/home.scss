@@ -124,31 +124,5 @@
         &__title {
             margin-bottom: 2rem;
         }
-
-        &__cards {
-            display: grid;
-            grid-template-columns: 1fr;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 1.8rem;
-
-            @include md {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-            }
-
-            @include lg {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 2rem;
-            }
-
-            @include xl {
-                column-gap: 10rem;
-                row-gap: 5rem;
-            }
-        }
     }
-
 }
