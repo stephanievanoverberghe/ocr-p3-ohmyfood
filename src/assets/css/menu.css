@@ -198,7 +198,7 @@ section {
 }
 
 .heart__toggle {
-  opacity: 0;
+  display: none;
   padding: 1.5rem;
   width: 2.2rem;
   height: 2.2rem;
@@ -254,9 +254,6 @@ section {
 }
 .body__heart {
   position: relative;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
   font-size: 2.2rem;
   background-color: transparent;
   cursor: pointer;
@@ -459,6 +456,7 @@ section {
 }
 
 .plate {
+  position: relative;
   overflow: hidden;
   display: flex;
   justify-content: space-between;
@@ -492,24 +490,42 @@ section {
   transition: width 0.4s ease-in-out, transform 0.4s ease-in-out;
   width: 0;
 }
-
-.plate:hover {
+.plate__label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
   cursor: pointer;
 }
-.plate:hover .plate__check {
-  transform: translateX(0);
-  width: 60px;
-}
-.plate:hover .check__icon {
-  transform: rotate(360deg);
-}
 
+@media only screen and (min-width: 992px) {
+  .plate:hover {
+    cursor: pointer;
+  }
+  .plate:hover .plate__check {
+    transform: translateX(0);
+    width: 60px;
+  }
+  .plate:hover .check__icon {
+    transform: rotate(360deg);
+  }
+}
 .check__icon {
   font-size: 2rem;
   padding: 2.5rem 2rem;
   color: var(--white);
   transform: rotate(0deg);
   transition: transform 0.7s ease-in-out;
+}
+
+input:checked + .plate__check {
+  transform: none;
+  width: 60px;
+}
+
+input {
+  display: none;
 }
 
 .body__description {

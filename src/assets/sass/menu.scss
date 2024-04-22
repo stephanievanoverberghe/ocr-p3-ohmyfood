@@ -98,6 +98,7 @@
 }
 
 .plate {
+    position: relative;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
@@ -136,18 +137,30 @@
             transform 0.4s ease-in-out;
         width: 0;
     }
+
+    &__label {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        cursor: pointer;
+    }
 }
 
-.plate:hover {
-    cursor: pointer;
+@include lg {
 
-    .plate__check {
-        transform: translateX(0);
-        width: 60px;
-    }
+    .plate:hover {
+        cursor: pointer;
 
-    .check__icon {
-        transform: rotate(360deg);
+        .plate__check {
+            transform: translateX(0);
+            width: 60px;
+        }
+
+        .check__icon {
+            transform: rotate(360deg);
+        }
     }
 }
 
@@ -157,6 +170,15 @@
     color: var(--white);
     transform: rotate(0deg);
     transition: transform .7s ease-in-out;
+}
+
+input:checked+.plate__check {
+    transform: none;
+    width: 60px;
+}
+
+input {
+    display: none;
 }
 
 .body {
