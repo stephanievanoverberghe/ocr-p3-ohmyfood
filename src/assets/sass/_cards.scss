@@ -10,13 +10,10 @@
         gap: 1.8rem;
 
         @include md {
-            display: grid;
             grid-template-columns: 1fr 1fr;
         }
 
         @include lg {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
             gap: 2rem;
         }
 
