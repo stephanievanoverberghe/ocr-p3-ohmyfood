@@ -1,28 +1,23 @@
-# Openclassrooms - Projet 3 : Dynamisez une page web avec des animations CSS
+# Openclassrooms - **Projet 3** : Dynamisez une page web avec des animations CSS
 
 ## Table des matières
 
--   [Openclassrooms - Projet 3 : Dynamisez une page web avec des animations CSS](#openclassrooms---projet-3--dynamisez-une-page-web-avec-des-animations-css)
+-   [Openclassrooms - **Projet 3** : Dynamisez une page web avec des animations CSS](#openclassrooms---projet-3--dynamisez-une-page-web-avec-des-animations-css)
     -   [Table des matières](#table-des-matières)
     -   [Aperçu](#aperçu)
-        -   [Screenshots](#screenshots)
-            -   [Version Mobile](#version-mobile)
-            -   [Version Desktop](#version-desktop)
-        -   [Liens](#liens)
+    -   [Technologies utilisées](#technologies-utilisées)
+    -   [Liens](#liens)
 
 ## Aperçu
 
-### Screenshots
-
-#### Version Mobile
-
-![](./src/assets/img/screenshot-mobile.png)
-
-#### Version Desktop
-
 ![](./src/assets/img/screenshot.png)
 
-### Liens
+## Technologies utilisées
 
--   Code du site : [GitHub](https://github.com/stephanievanoverberghe/ohmyfood)
--   Site en direct : [GitHub Pages](https://stephanievanoverberghe.github.io/ohmyfood/)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![Sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+
+## Liens
+
+-   Code du site : [GitHub](https://github.com/stephanievanoverberghe/ocr-p3-ohmyfood)
+-   Site en direct : [GitHub Pages](https://stephanievanoverberghe.github.io/ocr-p3-ohmyfood/)
